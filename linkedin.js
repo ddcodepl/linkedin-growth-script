@@ -62,7 +62,7 @@ See you!`
             data.connectNames = [...names].map(function (element) {
                 var name = element.innerText.split(" ")[0];
                 // replace special chars with space and trim
-                var properName =  name.replace(/[^a-zA-Z ]/g, " ").trim();
+                var properName =  name.replace(/[^[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]* [A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]]/g, " ").trim();
 
                 return properName.charAt(0).toUpperCase() + properName.slice(1);
             });
